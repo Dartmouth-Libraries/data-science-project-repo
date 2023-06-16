@@ -3,7 +3,7 @@ This file contains data-related code that is used throughout the project.
 """
 from .config import data_dir
 
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import Dataset
 from torchvision import datasets
 
 
@@ -35,9 +35,11 @@ def data(train: bool, transform=None, target_transform=None) -> Dataset:
 
 def training_data(transform=None, target_transform=None) -> Dataset:
     """ Returns the training data """
-    return data(train=True, transform=transform, target_transform=target_transform)
+    return data(train=True, transform=transform,
+                target_transform=target_transform)
 
 
 def test_data(transform=None, target_transform=None) -> Dataset:
     """ Returns the test data """
-    return data(train=False, transform=transform, target_transform=target_transform)
+    return data(train=False, transform=transform,
+                target_transform=target_transform)

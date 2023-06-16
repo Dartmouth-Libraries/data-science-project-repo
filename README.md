@@ -1,10 +1,10 @@
-# Project Name
+# Fashion Classifier
 
-A brief description of the project.
+This project trains and evaluates a classifier on the Fashion MNIST dataset.
 
 ## Table of Contents
 
-- [Project Name](#project-name)
+- [Fashion Classifier](#fashion-classifier)
   - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Repository Structure](#repository-structure)
@@ -12,73 +12,82 @@ A brief description of the project.
   - [Usage](#usage)
   - [Data](#data)
   - [Methods](#methods)
-  - [Results](#results)
   - [License](#license)
 
 ## Project Overview
 
-Provide an overview of the project, including its purpose and goals. Explain what problem the project aims to solve or what insights it seeks to gain from the data.
+This project is used as an example project to illustrate how the template Data Science Project Repo can be adapted to an indiviudal project. It uses a very basic example from the PyTorch documentation: Download and explore the Fashion MNIST dataset, then train a simple neural network on the dataset to classifiy the kind of fashion item (skirt, shoe, shirt, ...).
 
 ## Repository Structure
 
-Explain the structure of the repository, detailing the purpose of each directory and important files.
+This repository is structured as follows:
 
 ```
-├── data/
-|   ├── raw/
-|   ├── processed/
-|   └── cleaned/
+├── data/                                 # The dataset is rather large and kept outside of the repository.
+|   └── README.md                         # See this README to learn how to obtain the dataset.
 ├── notebooks/
-|   ├── 01-first-logical-notebook.ipynb
-|   ├── 02-second-logical-notebook.ipynb
-|   ├── prototype-notebook.ipynb
+|   ├── 01-model-training.ipynb           # The neural network is trained in this notebook.
+|   ├── 02-model-evaluation.ipynb         # The network trained above is evaluated on the test set here.
 |   └── archive/
-|	    └── no-longer-useful.ipynb
-├── projectname/
-|   ├── projectname/
+|	  |   └── eda.ipynb                       # Some non-essential code exploring the dataset.
+|   └── README.md                         # See this README for more info on the individual notebooks.
+├── fashion_classifier/                   # Lightweight package containing code used throughout the project
+|   ├── fashion_classifier/
 |	  | ├── __init__.py
 |	  | ├── config.py
 |	  | ├── data.py
-|	  | ├── utils.py
+|	  | ├── model.py
 |   └── setup.py
+|   └── README.md                         # See this README for installation instructions.
+├── models/
+|   ├── trained_model.pt                  # The model trained in the above notebook.
+|   └── README.md                         # See this README for more info on the trained model.
 ├── scripts/
-|   ├── script1.py
-|   ├── script2.py
-|   └── archive/
-|      └── no-longer-useful.py
+|   ├── get_data.py                       # Retrieves the dataset and places it into the data directory
+|   └── README.md                         # See this README for more info on the scripts.
 ├── .gitignore
-├── README.md
+├── README.md                             # This README.
 └── requirements.txt
 ```
 
 ## Installation
 
-Outline the steps required to install and set up the project. Include any dependencies that need to be installed, along with the versions if applicable.
+Install the projects requirements using the provided file:
 
 ```bash
 pip install -r requirements.txt
 ```
 
+Also install the local package:
+```bash
+pip install --editable ./fashion_classifier
+```
+
 ## Usage
 
-Describe how to use the project. Provide examples of how to run the code or any command-line arguments that can be used. Include any necessary configuration instructions.
+Before running any of the notebooks, run the script `scripts/get_data.py` to retrieve the dataset:
 
 ```bash
-python main.py --input data.csv --output result.txt
+python scripts/get_data.py
 ```
 
 ## Data
-
-Provide information about the data used in the project. Mention the source of the data and any relevant details such as the format, size, or preprocessing steps performed. If the data itself is not included in the repo, describe steps how to obtain it and where to place it.
+The dataset for this project is the [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset. Fashion-MNIST is a dataset of Zalando’s article images consisting of 60,000 training examples and 10,000 test examples. Each example comprises a 28×28 grayscale image and an associated label from one of 10 classes.
 
 ## Methods
-
-Explain the methods or algorithms used in the project. Describe any data preprocessing steps, feature engineering techniques, or machine learning models utilized. Include references to external resources if necessary.
-
-## Results
-
-Discuss the results or findings obtained from the project. Present any visualizations, performance metrics, or insights gained from the analysis. If applicable, compare the results with existing approaches or benchmarks.
+The trained classifier is a simple neural network implemented in `PyTorch`. For more information on the model structure, refer to `models/README.md`
 
 ## License
 
-Describe your licensing terms here (if any).
+<table >
+<tbody>
+  <tr>
+    <td style="padding:0px;border-width:0px;vertical-align:center">
+    Created by Simon Stone for Dartmouth College Library under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC BY-NC 4.0 License</a>.<br>For questions, comments, or improvements, email <a href="mailto:researchdatahelp@groups.dartmouth.edu">Research Data Services</a>.
+    </td>
+    <td style="padding:0 0 0 1em;border-width:0px;vertical-align:center"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></td>
+  </tr>
+</tbody>
+</table>
+
+Except where otherwise noted, the example programs are made available under the OSI-approved MIT license.
