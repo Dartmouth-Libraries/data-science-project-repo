@@ -5,5 +5,5 @@
 
 from setuptools import setup
 
-setup(name="projectname",
+setup(name="fashion_classifier",
       version="0.1")

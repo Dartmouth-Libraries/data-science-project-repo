@@ -1,5 +1,4 @@
 # Data
+The dataset for this project is the [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset. Fashion-MNIST is a dataset of Zalando’s article images consisting of 60,000 training examples and 10,000 test examples. Each example comprises a 28×28 grayscale image and an associated label from one of 10 classes.
 
-During the project lifecycle, several versions of your data will be created. All of them should be kept in this folder, but in separate subdirectories to keep things organized.
-
-If your dataset is large, this folder should be just a placeholder and its files are not committed to the repository. In that case, there should be script in `../scripts` that manages downloading or mounting the files here.
+Due to the size of the dataset, is not included in this repository. Instead, you can run the script `../scripts/get_data.py` to download the data and place it in this folder.

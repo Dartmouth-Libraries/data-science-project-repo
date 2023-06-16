@@ -1,19 +1,9 @@
-# Data Science Project Repo
-
-This repository can be used as an example structure for your own Data Science projects. It is heavily inspired by [this](https://gist.github.com/ericmjl/27e50331f24db3e8f957d1fe7bbbe510) example, which was adapted and expanded a bit.
-
-**Disclaimer:** Nothing in here should be understood as a *one-size-fits-all* or mandatory. Depending on your project, your team, and your personal preferences, you can (and should!) adapt this fit your needs. The important point is to think about structure and make conscious decisions that benefit the reproducibility and intelligibility of your analyses and modeling for all stakeholders (yourself included!).
-
-The project's landing page is this README file. Below you can find an example structure for what a great README should cover.
-
----
 # Project Name
 
 A brief description of the project.
 
 ## Table of Contents
 
-- [Data Science Project Repo](#data-science-project-repo)
 - [Project Name](#project-name)
   - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)

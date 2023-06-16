@@ -158,3 +158,12 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# We do not want any data to be uploaded to the repository
+data/*
+
+# A MacOS specific file that should not be part of the repo
+.DS_Store
+
+# VS Code settings are a user choice, so they should not be part of the repo
+.vscode
