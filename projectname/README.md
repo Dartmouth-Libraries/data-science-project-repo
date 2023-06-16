@@ -19,6 +19,6 @@ Having only a single point of definition is extremely helpful, since if you late
 You can install your custom package with `pip` from the root folder of the project repo:
 
 ```bash
-pip install ./projectname
+pip install --editable ./projectname
 ```
-Mind the `./`, which tells `pip` to not go online to find this package but use the local folder of this name.
+Mind the `./`, which tells `pip` to not go online to find this package but use the local folder of this name. You should provide the flag `--editable` to avoid having to re-install the package everytime you make a change to its source code.

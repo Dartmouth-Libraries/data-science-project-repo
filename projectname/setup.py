@@ -1,7 +1,7 @@
 """ This file is required so the package can be installed """
 
 # Example installation from the project repo root:
-# pip install ./projectname
+# pip install --editable ./projectname
 
 from setuptools import setup
 
