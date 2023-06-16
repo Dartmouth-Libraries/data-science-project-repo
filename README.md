@@ -38,6 +38,7 @@ Explain the structure of the repository, detailing the purpose of each directory
 |   ├── raw/
 |   ├── processed/
 |   └── cleaned/
+├── models/
 ├── notebooks/
 |   ├── 01-first-logical-notebook.ipynb
 |   ├── 02-second-logical-notebook.ipynb
@@ -51,6 +52,7 @@ Explain the structure of the repository, detailing the purpose of each directory
 |	  | ├── data.py
 |	  | ├── utils.py
 |   └── setup.py
+├── results/
 ├── scripts/
 |   ├── script1.py
 |   ├── script2.py
