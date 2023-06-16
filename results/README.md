@@ -1,0 +1,2 @@
+# Results
+You can store the results of your analysis or evaluation here. Usually those take the form of (markdow) tables or figures (e.g., SVG or PNG files), or a notebook exported as an HTML or PDF file.
